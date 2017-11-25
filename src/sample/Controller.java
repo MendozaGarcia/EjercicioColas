@@ -51,38 +51,53 @@ public class Controller implements Initializable{
             }
         });
 
-        this.eliminarBtn.setOnAction(new EventHandler<ActionEvent>() {
+        this.buscarBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //staHbx.getChildren().remove();
-               // insertarTxt.clear();
-
-
+                cola.encontrar(Integer.parseInt(buscarTxt.getText()));
             }
         });
-
-
 
         generarBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
 
                 switch (menuCmb.getValue().toString()) {
-                    case "extraer":
+                    case "Extraer":
 
+                        if (cola.vacia()) {
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("Cola");
+                            alert.setHeaderText("La cola esta vacia ingrese datos para extraer elemento");
+                            alert.showAndWait();
 
+                        } else {
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("Extraer");
+                            alert.setHeaderText("Dato extraido: "+ cola.extraer());
+                            alert.showAndWait();
+                            listaHbx.getChildren().remove (listaHbx.getChildren().size()-1);
+                        }
                         break;
 
 
                     case "Tamaño":
+                        if (cola.vacia()) {
 
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("Cola");
+                            alert.setHeaderText("La cola esta vacia ingrese datos para contar la cola");
+                            alert.showAndWait();
+                        } else {
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("Extraer");
+                            alert.setHeaderText("El tamaño de la cola es: "+ cola.total());
+                            alert.showAndWait();
+                        }
                         break;
 
 
                     case "Vaciar":
-                        System.out.println("dato a borrar");
-
-
 
                         break;
 
