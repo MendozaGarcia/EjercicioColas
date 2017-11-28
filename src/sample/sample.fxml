@@ -18,12 +18,12 @@
       <Pane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #154360;">
          <children>
             <TextField fx:id="insertarTxt" layoutX="87.0" layoutY="84.0" prefHeight="25.0" prefWidth="96.0" />
-            <TextField fx:id="buscarTxt" layoutX="242.0" layoutY="59.0" prefHeight="25.0" prefWidth="96.0" />
+            <TextField fx:id="buscarTxt" layoutX="233.0" layoutY="84.0" prefHeight="25.0" prefWidth="96.0" />
             <Button fx:id="insertarBtn" alignment="CENTER" defaultButton="true" layoutX="105.0" layoutY="122.0" mnemonicParsing="false" text="Insertar " />
             <Button fx:id="buscarBtn" layoutX="247.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Buscar" />
             <ComboBox fx:id="menuCmb" layoutX="142.0" layoutY="200.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="125.0" promptText="Menu" />
             <Button fx:id="generarBtn" layoutX="175.0" layoutY="239.0" mnemonicParsing="false" text="Generar" />
-            <HBox fx:id="listaHbx" alignment="CENTER" layoutX="105.0" layoutY="165.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #BFC9CA;" />
+            <HBox fx:id="listaHbx" alignment="CENTER" layoutX="100.0" layoutY="165.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-color: #BFC9CA;" />
             <Label layoutX="135.0" layoutY="21.0" style="-fx-background-color: #2980B9;" text="Ejercicio Cola" textAlignment="CENTER" textOverrun="CLIP">
                <font>
                   <Font name="Arial Narrow" size="26.0" />

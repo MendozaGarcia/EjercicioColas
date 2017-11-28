@@ -46,6 +46,9 @@ public class Controller implements Initializable{
                 hBox.getChildren().add(separator);
 
                 listaHbx.getChildren().add(0,hBox);
+                insertarTxt.setText(null);
+
+                buscarTxt.setText(null);
 
 
             }
@@ -56,6 +59,7 @@ public class Controller implements Initializable{
             public void handle(ActionEvent event) {
                 cola.encontrar(Integer.parseInt(buscarTxt.getText()));
             }
+
         });
 
         generarBtn.setOnAction(new EventHandler<ActionEvent>() {
@@ -98,6 +102,12 @@ public class Controller implements Initializable{
 
 
                     case "Vaciar":
+                        cola.vaciarCola();
+                        listaHbx.getChildren().clear();
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Mensaje");
+                        alert.setHeaderText(" La cola esta vacia");
+                        alert.showAndWait();
 
                         break;
 

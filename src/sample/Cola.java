@@ -9,11 +9,13 @@ import javafx.event.EventHandler;
  */
 public class Cola {
     private Nodo frente; //inicio de la cola
+    private int tamaño;
 
 
     //constroctur simple
     public Cola(){
         this.frente=null;
+        this.tamaño = 0;
     }
 
     public void insertar (int valor)
@@ -67,8 +69,6 @@ public class Cola {
         }
     }
 
-
-
     public int total (){//contar los elementos
         Nodo aux = null;
         int i=0;
@@ -79,7 +79,6 @@ public class Cola {
         }
         return i;
     }
-
 
     // metodo para mstrar los elementos de la cola
     public void mostrar()
@@ -107,4 +106,18 @@ public class Cola {
             return valorExtraer;// devolver el valor extraido
         }
     }
+
+    public void vaciar(){
+        frente = null;
+        tamaño=0;
+    }
+
+    public void vaciarCola() {
+        frente = null;
+        tamaño = 0;
+    }
+
+
+
+
 }
